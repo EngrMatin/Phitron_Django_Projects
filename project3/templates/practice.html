@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %} DTL Filter {% endblock title %}
+
+{% block css %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"/> {% endcomment %}
+{% endblock css %}
+
+{% block content %}
+
+<h3>Django Template Language: Filter tags</h3>
+<p>My name is {{name}}</p>
+<p>{{marks | add:'2'}}</p>
+<p>{{marks | divisibleby:'2'}}</p>
+<p>{{blog | length}}</p>
+<p>{{blog | wordcount}}</p>
+<p>{{blog | truncatewords:5}}</p>
+<p>{{blog | truncatechars:20}}</p>
+<p>{{name | make_list}}</p>
+<p>{{name | upper}}</p>
+<p>{{name | lower}}</p>
+<p>{{list1 | join:' : '}}</p>
+    
+{% comment %} <script src="{% static 'js/script.js' %}">  <script> {% endcomment %}
+{% endblock content %}
+
+{% block img %}
+    {% comment %} <img src="{% static 'images/19.jpg' %}" alt="Photo of Tea garden" > {% endcomment %}
+{% endblock img %}

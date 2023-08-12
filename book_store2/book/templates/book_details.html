@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Book Details {% endblock title %}
+  
+
+{% block content %}
+    <div class="greetings">     
+        <p> This is the Book Details page </p>
+    </div>
+    
+    <div style="width:90%; margin:auto; ">
+      <h4 style="text-align:center;"> Book Details Info: </h4>
+
+      <table style="width:100%; " class="table table-success table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Sl No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Category</th>
+            <th scope="col">First Published</th>
+            <th scope="col">Last Published</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{book.id}}</td>
+            <td>{{book.book_name}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.first_pub}}</td>
+            <td>{{book.last_pub}}</td>
+            
+            <td>
+                <a href="" class="btn btn-primary btn-sm text-white">Rent</a>
+                {% if user.is_superuser %}
+                <a href="{% url 'edit_book' pk=book.id %}" class="btn btn-info btn-sm text-white">Edit</a>
+                <a href="{% url 'delete_book' pk=book.id %}" class="btn btn-danger btn-sm text-white">Delete</a>
+                {% endif %}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+    {% block img %}
+        <div class="image"><img src="{% static 'images/image12.jpg' %}" alt="Photo of Yuna" ></div>
+    {% endblock img %}
+
+{% endblock content %}

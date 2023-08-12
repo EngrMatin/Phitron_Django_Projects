@@ -1,0 +1,25 @@
+Three types of inheritance:
+1. Abstract Base Class Inheritance: 
+    Used only to reduce repetation of code.
+    During creating more than one model classes: 
+        If there exists some common attributes/fields for all model class
+        An abstract class can be created with the common attributes
+        Abstract class cannot be used as a real model class (cannot be registered)
+        Real model classes can inherit the abstract class 
+            (can use the attributes of the abstract class)
+
+
+2. Multiple Inheritance:
+    Child classes can inherit the Parent class
+    Any change will reflect in both class
+
+
+3. Proxy Model Inheritance:
+    Data created, deleted, or updated in the proxy model will be saved as it is in the base model.
+    Data created, deleted, or updated in the base model will be saved as it is in the proxy model.
+    The difference is that you can change things like 
+        the default model ordering or 
+        the default manager in the proxy, 
+        without having to alter the original.
+    You can not create new fields in the proxy model.
+    Base class should not be an abstract class.

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Get Session {% endblock title %}
+  
+
+{% block content %}
+    <div class="greetings">     
+        <p> This is the Get Session page </p>
+    </div>    
+    <h4>Session is getting...</h4>
+    <h4>Name: {{name}}</h4>
+    <h4>Age: {{age}}</h4>
+    
+
+            
+        
+
+
+    {% block img %}
+        <div class="image"><img src="{% static 'images/image3.jpg' %}" alt="Photo of Yuna" ></div>
+    {% endblock img %}
+
+{% endblock content %}

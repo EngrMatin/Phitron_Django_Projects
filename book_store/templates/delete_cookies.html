@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Delete Cookie {% endblock title %}
+  
+
+{% block content %}
+    <div class="greetings">     
+        <p> This is the Delete Cookie page </p>
+    </div>    
+    <h4>Cookie is deleting...</h4>
+    <h4>{{name}}</h4>
+
+            
+        
+
+
+    {% block img %}
+        <div class="image"><img src="{% static 'images/image3.jpg' %}" alt="Photo of Yuna" ></div>
+    {% endblock img %}
+
+{% endblock content %}

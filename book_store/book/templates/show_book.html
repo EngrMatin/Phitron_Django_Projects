@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Show Book {% endblock title %}
+  
+
+{% block content %}
+    <div class="greetings">     
+        <p> This is the Show Book page </p>
+    </div>
+    
+    <div style="width:90%; margin:auto; ">
+      <h4 style="text-align:center;"> Books Info: </h4>
+      {% if book_list %}
+
+      <table style="width:100%; " class="table table-success table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Category</th>
+            <th scope="col">First Published</th>
+            <th scope="col">Last Published</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for x in book_list %}
+          <tr>
+            <td>{{x.book_name}}</td>
+            <td>{{x.author}}</td>
+            <td>{{x.category}}</td>
+            <td>{{x.first_pub}}</td>
+            <td>{{x.last_pub}}</td>
+            
+            <td>
+                <a href="{% url 'show_book' %}" class="btn btn-primary btn-sm text-white">Rent</a>
+                {% if user.is_superuser %}
+                <a href="{% url 'edit_book' x.id %}" class="btn btn-info btn-sm text-white">Edit</a>
+                <a href="{% url 'delete_book' x.id %}" class="btn btn-danger btn-sm text-white">Delete</a>
+                {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+      {% else %}
+      <p> No data available </p>
+      {% endif %}
+    </div>
+
+
+    {% block img %}
+        <div class="image"><img src="{% static 'images/image12.jpg' %}" alt="Photo of Yuna" ></div>
+    {% endblock img %}
+
+{% endblock content %}

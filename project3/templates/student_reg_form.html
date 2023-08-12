@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Student Registration form {% endblock title %}
+
+{% block css %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/form-style.css' %}"> {% endcomment %}
+{% endblock css %}
+
+{% block content %}
+<h3 style='text-align:center;'> Student Registration Form </h3>
+<form style='width:40%; margin:auto;' class='pt-5 reg_form' action='' method='POST' enctype='multipart/form-data' >
+    {% csrf_token %}
+
+    {{ std_reg_form|crispy }}
+
+    <input type='submit' class='btn btn-primary mt-2' value='Submit'>
+</form>
+{% endblock content %}
+
+
+
+
+

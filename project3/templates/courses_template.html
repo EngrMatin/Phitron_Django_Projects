@@ -1,0 +1,20 @@
+{% load my_tags %}
+
+<table style="width:50%; margin:auto;" class="table table-success table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Course ID</th>
+        <th scope="col">Course Name</th>
+        <th scope="col">Teacher</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for course in courses %}
+      <tr>
+        <td>{{course.id}}</td>
+        <td>{{course.name}}</td>
+        <td>{{course.teacher}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>

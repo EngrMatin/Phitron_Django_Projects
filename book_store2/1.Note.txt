@@ -1,0 +1,29 @@
+The following topics are covered in this project:
+1. Create model
+2. Create ModelForm
+3. Insert into database from front-end
+4. View from database in front-end 
+5. Edit data in database from front-end
+6. Delete data (from database) from front-end
+
+
+1. using templates and static directly from within app (No change in settings.py)
+2. crispy forms 
+3. block tag
+4. extends tag
+5. static folder / files / static tag / load static
+6. url tag
+7. variable -  render  -  context
+8. DTL filter
+9. if-else
+10. for loop
+11. Using MoelForm (forms.py)
+12. csrf_token
+13. def __str__(self): in model class
+14. Create superuser and use admin panel (url/admin)
+15. 
+16. 
+17. 
+18. 
+19. 
+

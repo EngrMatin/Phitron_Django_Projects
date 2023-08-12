@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Get Cookie {% endblock title %}
+  
+
+{% block content %}
+    <div class="greetings">     
+        <p> This is the Get Cookie page </p>
+    </div>    
+    <h4>Cookie is getting...</h4>
+    <h4>{{name}}</h4>
+
+            
+        
+
+
+    {% block img %}
+        <div class="image"><img src="{% static 'images/image3.jpg' %}" alt="Photo of Yuna" ></div>
+    {% endblock img %}
+
+{% endblock content %}

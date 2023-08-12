@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load my_tags %}
+
+{% block title %} Courses {% endblock title %}
+
+{% block css %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style-pro.css' %}"> {% endcomment %}
+{% endblock css %}
+
+{% block content %}
+
+<table border='1' cellspacing='1' cellpadding='1' width:1000px>
+    <tr>
+        <th > Course ID </th>
+        <th> Course Name </th>
+        <th> Course Teacher </th>
+    </tr>
+    {% for i in courses %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.teacher}}</td>
+    </tr>
+    {% endfor %}
+
+</table>  
+
+<br>    
+<h4> Available Courses: </h4>
+{% show_courses %}
+
+{% endblock content %}
+
+{% block img %}
+    {% comment %} <img src="{% static 'images/19.jpg' %}" alt="Photo of Tea garden" > {% endcomment %}
+{% endblock img %}

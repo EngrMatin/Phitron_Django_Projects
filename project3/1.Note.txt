@@ -1,0 +1,21 @@
+The following topics are covered in this project:
+1. static folder/files/static tag/load static
+2. crispy forms 
+3. templates
+4. block tag/block.super tag
+5. custom tag (templatetags folder/my_tags.py)
+6. custom templates (templatetags folder/my_tags.py and courses_template.html)
+7. extends tag
+8. DTL filter
+9. variable -  render  -  context
+10. if-else
+11. for loop
+12. url tag
+13. csrf_token
+14. using templates and static directly from within app (No change in settings.py)
+15. creating model(database table)
+16. def __str__(self): in model class
+17. Creating forms (registration_form.py ,  registratiom_form.html)
+18. Using MoelForm (forms.py)
+19. Create superuser and use admin panel (url/admin)
+

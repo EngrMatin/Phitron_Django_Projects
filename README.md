@@ -1,1 +1,1 @@
-# Phitron_Django_Projects
+# Django_Projects
